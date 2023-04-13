@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+	<h1 class="text-warning mt-3 text-center designer_name">Created by <span>Nallabothula Nagarjuna</span> ,an aspiring developer</h1>
+<div class="container box">
+<div>
+	<input type="text" id="input" class="text-center rounded">
+	<button class="ml-4 btn-primary equal_btn" onclick="res()">=</button>
+	<div>
+		<h1 class="text-danger text-center" id="output"></h1>
+	</div>
+	
+</div>
+<div>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_ac()"><b><i>AC</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_de()"><b><i>DE</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_per()"><b><i>%</i></b></button>
+	<button class="button btn-warning row_btns mt-2 git-btn"><b><i><a href="https://github.com/nagarjuna1711">GitHub</a></i></b></button>
+</div>
+<div>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_7()"><b><i>7</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_8()"><b><i>8</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_9()"><b><i>9</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_X()"><b><i>X</i></b></button>
+</div>
+<div>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_6()"><b><i>6</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_5()"><b><i>5</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_4()"><b><i>4</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_div()"><b><i>/</i></b></button>
+</div>
+<div>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_3()"><b><i>3</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_2()"><b><i>2</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_1()"><b><i>1</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_add()"><b><i>+</i></b></button>
+</div>
+<div>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_00()"><b><i>00</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_0()"><b><i>0</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_dot()"><b><i>.</i></b></button>
+	<button class="button btn-warning row_btns mt-2" onclick="btn_sub()"><b><i>-</i></b></button>
+</div>
+</div>
+</body>
+
+<script type="text/javascript">
+	let input = document.getElementById("input");
+	let output = document.getElementById("output");
+	let background = document.getElementById("body");
+	input.style.fontWeight = "bold";
+	input.setAttribute("placeholder","type equation.....");
+	output.style.textShadow = "0 5px 5px black";
+	function res(){
+		output.innerHTML =input.value+"="+eval(input.value);
+		input.value = "";
+	}
+	function btn_7(){
+		input.value += "7";
+	}
+	function btn_8(){
+		input.value += "8";
+	}
+	function btn_9(){
+		input.value += "9";
+	}
+	function btn_X(){
+		input.value += "*";
+	}
+	function btn_6(){
+		input.value += "6";
+	}
+	function btn_5(){
+		input.value += "5";
+	}
+	function btn_4(){
+		input.value += "4";
+	}
+	function btn_div(){
+		input.value += "/";
+	}
+	function btn_3(){
+		input.value += "3";
+	}
+	function btn_2(){
+		input.value += "2";
+	}
+	function btn_1(){
+		input.value += "1";
+	}
+	function btn_add(){
+		input.value += "+";
+	}
+	function btn_00(){
+		input.value += "00";
+	}
+	function btn_0(){
+		input.value += "0";
+	}
+	function btn_dot(){
+		input.value += ".";
+	}
+	function btn_sub(){
+		input.value += "-";
+	}
+	function btn_ac(){
+		input.value = "";
+		output.innerHTML = "";
+	}
+	function btn_de(){
+		input.value = input.value.toString().slice(0,-1);
+	}
+	function btn_per(){
+		input.value += "%";
+	}
+</script>
+
+</html>
